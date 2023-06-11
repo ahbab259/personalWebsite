@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .arrow-container {
+        margin-left: 45%;
+        position: absolute;
+    }
+
+    .arrow {
+        width: 15px;
+        height: 15px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+        animation: blink 2s infinite;
+    }
+
+    .arrow-link {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        }
+
+    .arrow-link:hover .arrow {
+        border-color: rgb(255, 255, 255); /* Customize the hover effect if desired */
+    }
+
+    @keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    }
+    body {
+        overflow-y: scroll;
+        background-color: rgb(0, 0, 0) !important;
+        color: white !important;
+    }
+    .navbar {
+        z-index: 100;
+    }
+
+    .navbar-brand {
+        margin-right: 0 !important;
+    }
+
+    .navbar-collapse {
+        z-index: 99;
+    }
+
+    .background-image {
+      background-image: url("./bw_bg.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100vh;
+    }
+
+    .intro-text {
+      font-family: Monaco, Consolas, 'Courier New', monospace;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+      position: absolute;
+      left: 30%;
+      top: 35%;
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+</style>
+
+    <meta charset="UTF-8">
+    <title>Resume - Syed Mohammad Hasin Ahbab</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $('.arrow-link').on('click', function(event) {
+            if (this.hash !== '') {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 1000, function() {
+                window.location.hash = hash;
+            });
+            }
+        });
+        });
+    </script>
+</head>
+<body>
+    <div class="background-image">
+        <div class="intro-text">
+            <h2>Hello,</h2>
+            <h2> I'm Hasin</h2>
+            <div class="arrow-container">
+                <a href="#name_header" class="arrow-link">
+                  <div class="arrow"></div>
+                </a>
+              </div>           
+          </div>                          
+    </div>
+<header class="container">
+    <div class="d-flex justify-content-center">
+        <h1 class="mt-4" id="name_header">SYED MOHAMMAD HASIN AHBAB</h1>
+    </div>
+    <ul class="list-unstyled text-center">
+        <li>782 Victoria Avenue, Windsor, ON • +1(647) 863-0259 </li> 
+        <li><a href="mailto:hasin_ahbab@yahoo.com" target="_blank">Email&nbsp; <span class="emoji">&#x2709;&#xFE0F;</span>
+        </a>  &nbsp;  <a href="https://github.com/ahbab259" target="_blank">GitHub &nbsp;<span class="emoji">&#x1F680;</span>
+        </i></a> &nbsp; <a href="https://www.linkedin.com/in/syed-mohammad-hasin-ahbab-27518779/" target="_blank">LinkedIn &nbsp;<span class="emoji">&#x1F4E1;</span>
+        </a></li>
+        
+    </ul>
+</header>
+
+
+  
+
+    <div class="container mt-4">
+        <h2>About Me</h2>
+        <p>
+            As an ASP.NET developer with a little over 3 years of experience, I have managed and developed enterprise-scale applications processing real-time transactions and web-based reporting applications. I have worked in Agile Scrum teams and utilized my skills in ADO.NET, MVC framework, TypeScript, REST services, jQuery, JavaScript, and more. I have completed my master's studies from the University of Windsor and looking for my first opportunity here, in Canada.
+        </p>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Projects</h2>
+        <ul>
+            <li>Donate Something: A country-based, open-source, donation application for 3rd world countries, built with ASP.NET MVC, MS SQL Server, and PayPal payment API (updated repository available on <a href="https://github.com/ahbab259/DonationApplication"> GitHub <span class="emoji">&#x1F680;</span></a>)</li>
+            <li>Real-time object detection using TensorFlow (2016 North South University, Dhaka, Bangladesh)</li>
+        </ul>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Experience</h2>
+
+        <h4>Associate Software Engineer</h4>
+		<h5>Feb 2020 to Dec 2021</h5>
+        <p>
+            <a href="https://www.data-edge.com/" target="_blank">Data-edge Limited</a>, Dhaka, Bangladesh
+        </p>
+        <ul>
+            <li>Developed and maintained web-based reporting applications and real-time transaction processing applications using ASP.NET Web Forms, ADO.NET Entity Framework, MS SQL Server, and SAP Crystal Report</li>
+            <li>Participated in every aspect of the SDLC, from requirement collection, documentation, and development to UAT and UVT with clients</li>
+            <li>Troubleshooted and debugged existing problems and researched new methods and technologies for efficient implementations</li>
+            <li>Collaborated with the project lead in designing SQL databases and implementing business logics in Stored Procedures</li>
+            <li>Spearheaded requirement collection and documentation process for a cross-functional team, resulting in a significant reduction in project delivery time</li>
+            <li>Delivered presentations to senior management and clients regarding new modules, implementation methods, and existing module performance</li>
+            <li>Participated in daily Scrum meetings and collaborated with the Scrum Master to moderate the overall progress of the project</li>
+            <li>Remote work experience during COVID, utilizing MicrosoftTeams, Zoom, Cisco Webex, and Bluejeans for client support and office meetings</li>
+<li>Prepared mini-projects for new interns to demonstrate application workflow</li>
+</ul>
+
+
+    <h4>Assistant Software Engineer</h4>
+	<h5>Sep 2018 to Feb 2020</h5>
+    <p>
+        <a href="https://www.linkedin.com/company/logicsoftbd/" target="_blank">Logic Software Limited</a>, Dhaka, Bangladesh
+    </p>
+    <ul>
+        <li>Engineered and looked after an asynchronous, calendar-based software for garment industries using ASP.NET WinForms, allowing graphical representations of past, ongoing, and upcoming orders, increasing visibility and efficiency in the production process</li>
+        <li>Established communication with an ERP database using a web API and utilized JSON serializer and deserializer to efficiently retrieve and manipulate data</li>
+        <li>Performed data migration from an Oracle server to MS SQL Server using OracleDataReader, ensuring data integrity and minimizing potential disruptions of the production process</li>
+        <li>Updated project status in Kanban from Jira</li>
+    </ul>
+
+    <h4>Junior Software Engineer</h4> 
+    <h5>Jan 2018 to Sep 2018</h5>
+    <p>
+       <a href="https://b-causebd.com/" target="_blank">b-cause Bangladesh Limited</a>, Dhaka, Bangladesh
+    </p>
+    <ul>
+        <li>Built and oversaw a 5-tier ERP software using ASP.NET MVC, AngularJS, Bootstrap, and ADO.NET Entity Framework to streamline database interactions, ensuring scalability and efficiency</li>
+        <li>Formulated a website for demonstrating the company's API, using Angular 5 TypeScript to enable seamless integration between front-end and back-end systems</li>
+        <li>Followed a CI-CD environment and used Cypress to test and debug, ensuring fast delivery</li>
+    </ul>
+</div>
+
+<div class="container mt-4">
+    <h2>Technical Skills</h2>
+    <ul>
+        <li>Framework: ASP.NET MVC, WinForms, WebForms, ADO.NET Entity Framework, VB.NET (beginner)</li>
+        <li>Database: MS SQL Server, MySQL, Express (beginner)</li>
+        <li>Front-end: SAP Crystal Report, TypeScript, AngularJS, Node.js, React.js (beginner)</li>
+        <li>Version Control: GitHub, GitLab, BitBucket, SVN, Team Foundation Server</li>
+        <li>Testing Tools: Cypress(beginner)</li>
+        <li>Payment Integrations: Stripe (beginner), PayPal (beginner)</li>
+        <li>Others: Microsoft Teams, Zoom, Cisco Webex, Bluejeans</li>
+    </ul>
+</div>
+
+<div class="container mt-4">
+    <h2>Soft Skills</h2>
+    <ul>
+        <li>Fluent in verbal and written English with an IELTS overall score of 7.0</li>
+        <li>Maintaining deadlines and determined to deliver solutions within the given timeframe.</li>
+        <li>Proven track record of working in a team-driven environment, sharing ideas, and collaborating with others.</li>
+        <li>Love learning new algorithms to solve existing and new problems. Preferred platform : <a href="https://www.hackerrank.com/hasin_ahbab" target="_blank">Hackerrank&nbsp;<span class="emoji">&#x1F3AF;</span>
+        </a></li>
+        <li>People person, love to make conversations, connecting with others immediately with a smile.</li>
+    </ul>
+</div>
+
+<div class="container mt-4">
+    <h2>Education</h2>
+    <ul>
+        <li>Graduated, MEng in Electrical and Computer Engineering,<a href="https://www.uwindsor.ca/"> University of Windsor</a> - Jan 2022 to Apr 2023</li>
+        <li>Bachelor of Computer Science, <a href="http://www.northsouth.edu/"> North South University</a>, Dhaka, Bangladesh - Jan 2013 to Apr 2017</li>
+</ul>
+</div> 
+</body>
+</html>
